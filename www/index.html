@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">	
+	<title>文創商城</title>
+	<link rel="stylesheet" href="css/bootstrap-4.0.0.css">
+	<link rel="stylesheet" href="css/style.css">
+	
+	<link rel="preload" href="img/headbg1.jpg" as="image">
+	<link rel="preload" href="img/headbg2.jpg" as="image">
+	<link rel="preload" href="img/headbg3.jpg" as="image">
+	<link rel="preload" href="img/headbg4.jpg" as="image">
+</head>
+<body>
+	<input type="checkbox" id="chkbx">
+	<label for="chkbx" id="menuchk">
+		<span>-</span>
+		<span>-</span>
+		<span>-</span>
+	</label>
+	<ul id="menu">
+		<li><a href="#head" data-text="HOME">首頁</a></li>
+		<li><a href="#about" data-text="ABOUT">關於我們</a></li>
+		<li><a href="#event" data-text="EVENT">精彩活動</a></li>
+		<li><a href="#shop" data-text="SHOP">商品一覽</a></li>
+		<li><a href="#contact" data-text="CONTACT">聯絡我們</a></li>
+		<li  class="logon"><a href="#logon" data-text="LOG ON">會員登入</a></li>
+		<li id="cart"><a href="#cart" data-text="CART">購物車<span><img src="img/cart.png" class="menu-icon" alt=""></span></a></li>
+	</ul>
+	<section id="head">
+		<div class="container_fluid w-100">
+			<div class="row">
+				<div class="col-sm-3 d-flex align-items-center justify-content-end">
+					<div class="page">
+						<p>/04</p>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="slogan">
+						<span></span>
+						<span></span>
+						<span></span>
+						<img id="sloganimg" src="img/slogan.png" alt="">
+						<p></p>
+					</div>
+				</div>
+				<div class="col-sm-3 d-flex align-items-center">
+					<div class="head-content">
+						<p>設計是發掘並發揚每件事物的特質</p>
+						<p>設計是增添生活的品質</p>
+						<p>文創商品城的設計皆有其獨特的風味</p>
+						<p>不僅僅是一份禮品 更是一份打動人心的故事</p>
+						<p><a id="scroll" href="#about">read more</a></p>
+					</div>	
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="about">
+		<div class="container_fluid">
+			<img id="ab-title" src="img/ab-title.png" alt="">
+			<div class="row mt-5" id="ct-shape">
+				<div class="col-md-4">
+					<div class="ab-box box1">
+						<span class="span">
+							<h2>02</h2>
+						</span>
+						<h3>文創的魅力</h3>
+						<p>文創產品的生命力在於有獨特性文化標誌，是獨特文化的創意衍生品。構思巧妙，巧奪天工，人無我有，人有我新，人新我特。</p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="ab-imgbx">
+						<span class="span">
+							<h2>01</h2>
+						</span>
+						<p>網羅世界各地極上之精品品牌、最具創意之文創品牌、不凡品味之生活品牌。
+							其獨特的設計與細膩的手工，讓您無論自用或送禮，皆能展現出類拔萃與別出心裁之形象。</p>
+						<img id="ab-img" src="img/headbg1.jpg" alt="">
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="ab-box box2">
+						<span class="span">
+							<h2>03</h2>
+						</span>
+						<h3>我們的理想</h3>
+						<p>達到品牌與經濟雙重價值與效應，有利於提升景區或文博單位的知名度及影響力，適當推出讓觀眾喜愛、適合遊客需求的文創產品。
+						</p>
+					</div>
+				</div>	
+			</div>
+		</div>
+	</section>
+	<section id="event">
+		<img id="circle" src="img/shop-circle.png" alt="">
+		<img id="shape" src="img/shop-shape.png" alt="">
+		<div class="container pt-5">
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="event-box box1">
+						<h3 class="check1">Check!</h3>
+						<img src="img/event1.jpg" alt="">
+					</div>
+					<div class="event-text text1">
+						<h4>01</h4>
+						<p>拉花咖啡</p>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="event-box box2 event-content">
+						<h2>拉花咖啡</h2>
+						<p>出示你要的圖案或照片，即可客製化拉花咖啡，色香味俱全。打卡po文，展示出您的手藝吧。</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-4 d-flex justify-content-center">
+					<div class="event-box event-content">
+						<h2>藝術展覽</h2>
+						<p>本店網羅了各地攝影師的作品，自然，人文等各類題材應有盡有，將於活動期間展出，為生活增添藝術氣息。</p>
+					</div>
+				</div>
+				<div class="col-sm-4">					
+					<div class="event-main">
+						<h2>精彩活動</h2>
+						<p class="text-center">為回饋客戶在本商店的光顧<br>本店將於十月二十舉辦線下活動<br>線上報名可享受早鳥優惠<br>具有會員證明可現場享受八折優惠</p>
+						<button class="btn eve-btn">活動報名</button>
+					</div>
+				</div>
+				<div class="col-sm-4 d-flex justify-content-center">					
+					<div class="event-box">
+						<h3 class="check1">Check!</h3>
+						<img src="img/event5.jpg" alt="">
+					</div>
+					<div class="event-text">
+						<h4>02</h4>
+						<p>清新香水</p>
+					</div>
+				</div>	
+			</div>
+			<div class="row">
+				<div class="col-sm-6">					
+					<div class="event-box box1">
+						<h3 class="check1">Check!</h3>
+						<img src="img/event3.jpg" alt="">
+					</div>
+					<div class="event-text text1">
+						<h4>03</h4>
+						<p>藝術展覽</p>
+					</div>
+				</div>
+				<div class="col-sm-6">				
+					<div class="event-box box2 event-content">
+						<h2>清新香水</h2>
+						<p>不同於專櫃品牌，此香水只調配清新氣味的香水，讓妳出門走到哪都是具有清新氣息萬人迷。</p>
+					</div>
+				</div>
+			</div>
+		</div>			
+	</section>
+	<section id="shop">
+		<div class="container_fluid">
+			<div class="pt-5 pd-main" id="app">
+				<div class="container">
+					<div class="row">
+						<div class="col-2 d-flex justify-content-center">
+							<button href="#tab1" class="list-btn">書刊</button>
+						</div>
+						<div class="col-2 d-flex justify-content-center">
+							<button href="#tab2" class="list-btn">鍵盤</button>
+						</div>
+						<div class="col-2 d-flex justify-content-center">
+							<button href="#tab3" class="list-btn">乾燥花</button>
+						</div>
+						<div class="col-2 d-flex justify-content-center">
+							<button href="#tab4" class="list-btn">餐具</button>
+						</div>
+						<div class="col-2 d-flex justify-content-center">
+							<button href="#tab5" class="list-btn">飾品</button>
+						</div>
+						<div class="col-2 d-flex justify-content-center">
+							<button href="#tab6" class="list-btn">家具</button>
+						</div>
+					</div>
+				</div>
+				<div class="row h-100 pd-show">
+					<div class="col-md-9 tab" :id="[product.className]" v-for="product in products">
+						<div class="row">
+							<div class="col-sm-5 pd-imgbox">
+								<img :src="product.thumb" class="pd-img">
+							</div>
+							<div class="col-sm-7 pd-content">
+								<h2>{{ product.name }}</h2>
+								<p>{{product.content}}</p>
+								<div class="d-flex justify-content-round pt-5" id="process">
+									<P id="price">價格: {{product.price}}</P>
+									<img :src="product.process" class="process-img">
+								</div>	
+								<div class="action-box">
+									<div>
+										<button class="round" @click="minusOne(product)">-</button>
+										<span>{{product.amountShow}}</span>
+										<button class="round" @click="addOne(product)">+</button>
+									</div>
+									<button @click="addToCart(product)" class="add">加入購物車</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-3 timeline">
+						<ul>
+							<li>選擇商品</li>
+							<li>確認數量金額</li>
+							<li>確認下單</li>
+							<li>賣家接單</li>
+							<li>物流運送</li>
+							<li>到達後核對商品</li>
+						</ul>
+					</div>
+				</div>
+				<div id="product-list" class="form-log">
+					<table class="table">
+						<thead>
+							<tr>
+								<th colspan="5">購物清單</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="table-title">
+								<td>品項</td>
+								<td>數量</td>
+								<td>單價</td>
+								<td>小計</td>
+								<td></td>
+							</tr>
+							<tr v-for="product in productsInCart">
+								<td>{{product.name}}</td>
+								<td>{{product.amount}}</td>
+								<td>{{product.price}}</td>
+								<td>{{product.sum}}</td>
+								<td>
+									<button class="button-del" @click="remove(product)">×</button>
+								</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<td></td>
+								<td colspan="3">Total <span class="total-price">$ {{total}}</span></td>
+								<td></td>
+							</tr>
+						</tfoot>
+					</table>
+					<button class="checkout btn" id="checkout">前往付款</button>
+					<input type="button" class="btn close2 checkout" value="關閉">
+				</div>	
+			</div>
+			
+			<div class="block-container">
+		        <div class="block"  style="left: 283px;">
+		        	<img href="#tab1" src="img/product1.jpg" alt="">
+		        </div>
+		        <div class="block" style="left: 383px;">
+		        	<img href="#tab2" src="img/product2.jpg" alt="">
+		        </div>
+		        <div class="block" style="left: 483px;">
+		        	<img href="#tab3" src="img/product3.jpg" alt="">
+		        </div>
+		        <div class="block" style="left: 583px;">
+		        	<img href="#tab4" src="img/product4.jpg" alt="">
+		        </div>
+		        <div class="block" style="left: 683px;">
+		        	<img href="#tab5" src="img/product5.jpg" alt="">
+		        </div>
+		        <div class="block" style="left: 83px;">
+		        	<img href="#tab6" src="img/product6.jpg" alt="">
+		        </div>
+		        <div class="block" style="left: 183px;">
+		        	<img href="#tab4" src="img/product4.jpg" alt="">
+		        </div>
+		         <div class="block" style="left: 283px;">
+		        	<img href="#tab2" src="img/product2.jpg" alt="">
+				</div>
+				<div class="block" style="left: 383px;">
+		        	<img href="#tab5" src="img/product5.jpg" alt="">
+				</div>
+		    </div>
+		</div>
+	</section>
+	<section id="contact">
+		<div class="container_fluid">
+				<div class="row">
+					<div class="col-md-6 contact-form">
+						<div class="contact-box mt-3">
+							<div class="form-group">
+								<h2 class="pb-4">聯絡我們</h2>
+							</div>
+							<div class="form-group">
+								<label for="usersname">姓名</label>
+								<input type="text" class="form-control" required>
+							</div>
+							<div class="form-group">
+								<label for="email">email</label>
+								<input type="email" class="form-control" required>
+							</div>
+							  <div class="form-group">
+								<label for="phonenum">手機號碼</label>
+								<input type="text" class="form-control" required>
+							</div>
+							<div class="form-group">
+								<label for="suggest">意見回饋</label>
+								<textarea class="form-control" id="suggest" rows="5" required></textarea>
+							</div>
+								<button type="reset" class="btn contact-btn d-flex mx-auto">送出</button>
+							</div>
+						</div>
+					<div class="col-md-6 contact-form mt-3">
+						<div class="contact-box">
+							<h2 class="pb-4">有獎徵答</h2>
+							<h4>全對的人有機會獲得文創禮品券</h4>
+						<div class="form-group">
+							<label for="inputState">文創的特質是?</label>
+							<select id="inputState" class="form-control">
+								<option selected>具有獨特形象與故事</option>
+								<option>設計特殊而已</option>
+								<option>沒什麼特質</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label for="inputState">我們的主要產業是?</label>
+							<select id="inputState" class="form-control">
+								<option selected>農業</option>
+								<option>漁業</option>
+								<option>文創</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label for="inputState">我們的理想是?</label>
+							<select id="inputState" class="form-control">
+								<option selected>打造品牌與價值雙贏</option>
+								<option>適時為客戶推出符合需求的產品</option>
+								<option>以上皆是</option>
+							</select>
+						</div>	
+						<div class="form-group">
+							<label for="inputState">設計的意義是?</label>
+							<select id="inputState" class="form-control">
+								<option selected>發掘事務的特質</option>
+								<option>沒意義</option>
+								<option>純粹好看</option>
+							</select>
+						</div>
+							<button type="reset" class="btn contact-btn d-flex mx-auto">送出</button>
+						</div>
+					</div>
+				</div>
+		</div>
+	</section>
+	<footer>
+		<div class="container mb-0">
+			<div class="row">
+				<div class="col-sm-4">
+					<h3>快速導覽</h3>
+					<p><a href="#head">首頁</a></p>
+					<p><a href="#about">關於我們</a></p>
+					<p><a href="#event">精彩活動</a></p>
+					<p><a href="#shop">商品一覽</a></p>
+					<p><a href="#contact">聯絡我們</a></p>
+				</div>
+				<div class="col-sm-4">
+					
+					<div class="text-left">
+						<h3>店家資訊</h3>
+						<p><span><img class="footer-icon" src="img/phone.png" alt=""></span>客服專線: 02 12345678</p>
+						<p><span><img class="footer-icon" src="img/mail.png" alt=""></span> 電子信箱: a1234@gmail.com</p>
+						<p><span><img class="footer-icon" src="img/id.png" alt=""></span>	客服ID: a001</p>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<h3>訂閱電子報</h3>
+					<p>追蹤我們 獲得最新資訊</p>
+					<span>
+						<input type="text" required>
+						<button id="read">訂閱</button>
+					</span>
+					<p>
+						<span><img class="social footer-social" src="img/fb.png" alt=""></span>
+						<span><img class="social footer-social" src="img/line.png" alt=""></span>
+						<span><img class="social footer-social" src="img/gmail.png" alt=""></span>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<form id="log" class="log-form">
+		<div class="form-imgbx">
+			<img src="img/logimg.jpg" alt="">
+		</div>
+		<div class="form-text">
+			<h3>會員登入</h3>
+			<label for="num">帳號</label>
+			<input type="text" id="num" placeholder="輸入帳號" required>
+			<label for="password">密碼</label>
+			<input type="text" id="password" placeholder="輸入密碼" required>
+			<p>使用其他方式登入</p>
+			<div class="form-group">	
+				<span><img class="social" src="img/fb.png" alt=""></span>
+				<span><img class="social" src="img/line.png" alt=""></span>
+				<span><img class="social" src="img/gmail.png" alt=""></span>
+			</div>			
+			<p>還沒有帳號?<a class="reg" href="#">註冊</a></p>
+			<div class="form-group">	
+				<input type="submit" class="btn log-chk" value="登入">
+				<input type="reset" class="btn close2" value="關閉">
+			</div>			
+		</div>
+	</form>
+	<form id="reg" class="log-form">
+		<div class="form-imgbx">
+			<img src="img/reg.jpg" alt="">
+		</div>
+		<div class="form-text">
+			<h3>會員註冊</h3>
+			<label for="name">姓名</label>
+			<input type="text" id="name" placeholder="輸入姓名" required>
+			<label for="email">Gmail</label>
+			<input type="text" id="email" placeholder="輸入電子信箱" required>
+			<label for="num">帳號</label>
+			<input type="text" id="num" placeholder="輸入帳號" required>
+			<label for="password">密碼</label>
+			<input type="text" id="password" placeholder="輸入密碼" required>	
+			<p>已有帳號?<a class="logon" href="#">登入</a></p>
+			<p>	
+				<input type="submit" class="btn log-chk" value="登入">
+				<input type="reset" class="btn close2" value="關閉">
+			</p>			
+		</div>
+	</form>
+	<form id="join" class="log-form">
+		<div class="form-imgbx">
+			<img src="img/join.jpg" alt="">
+		</div>
+		<div class="form-text">
+			<h3>活動報名</h3>
+			<label for="name">姓名</label>
+			<input type="text" id="name" placeholder="輸入姓名" required>
+			<label for="email">Gmail</label>
+			<input type="text" id="email" placeholder="輸入電子信箱" required>
+			<label>人數</label>
+			<input type="number" min="0" max="10" value="人數">
+			<label>活動</label>
+			<select>
+				<option value="">拉花咖啡</option>
+				<option value="">香水調製</option>
+				<option value="">藝術展覽</option>
+			</select>
+			
+			<p>需會員報名(快速登入)</p>
+			<label for="num">帳號</label>
+			<input type="text" id="num" placeholder="輸入帳號" required>
+			<label for="password">密碼</label>
+			<input type="text" id="password" placeholder="輸入密碼" required>
+			<p>	
+				<input type="submit" class="btn" value="報名">
+				<input type="reset" class="btn close2" value="關閉">
+			</p>			
+		</div>
+	</form>
+	<script src="js/jquery-3.4.1.js"></script>
+	<script src="js/bootstrap-4.0.0.js"></script>
+	<script src="js/vue.js"></script>
+	<script src="js/all.js"></script>
+	<script src="js/cart.js"></script>
+</body>
+</html>
