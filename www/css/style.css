@@ -340,13 +340,14 @@ section#event .row{
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	cursor: pointer;
 }
 .event-content h2{
 	color: var(--snd-color);
 }
 .event-box.box1{
 	position: absolute;
-	left: 45%;
+	right: 10%;
 }
 .event-box.box2{
 	position: absolute;
