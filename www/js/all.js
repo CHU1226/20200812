@@ -39,6 +39,7 @@ $(document).ready(function() {
 		$('.event-main').hide();
 		var checked = $(this).attr("href");
 		$(checked).fadeIn();
+		return false
 	});
 	$('.tab').hide();
 	$('.tab:first').show();
