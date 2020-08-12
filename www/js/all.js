@@ -14,7 +14,6 @@ $(document).ready(function() {
 		$('form#reg').fadeIn();
 		return false
 	});
-
 	$('.eve-btn').click(function(){
 		$('#product-list').fadeOut();
 		$('form#join').fadeIn();
@@ -33,6 +32,13 @@ $(document).ready(function() {
 	});
 	$('.log-chk,.social').click(function(){
 		alert("目前尚無網路請稍後再試");
+	});
+	$('.event-main').hide();
+	$('.event-main:first').show();
+	$('.event-content').click(function(){
+		$('.event-main').hide();
+		var checked = $(this).attr("href");
+		$(checked).fadeIn();
 	});
 	$('.tab').hide();
 	$('.tab:first').show();
