@@ -75,7 +75,8 @@
 						<span class="span">
 							<h2>01</h2>
 						</span>
-						<p>網羅世界各地極上之精品品牌、最具創意之文創品牌、不凡品味之生活品牌。
+						<h3>關於我們</h3>
+						<p>網羅世界各地極上之精品品牌、不凡品味之生活品牌。
 							其獨特的設計與細膩的手工，讓您無論自用或送禮，皆能展現出類拔萃與別出心裁之形象。</p>
 						<img id="ab-img" src="img/headbg1.jpg" alt="">
 					</div>
@@ -99,7 +100,7 @@
 		<div class="container pt-5">
 			<div class="row">
 				<div class="col-sm-6">
-					<div class="event-box box1">
+					<div class="event-box box1" href="#event1">
 						<h3 class="check1">Check!</h3>
 						<img src="img/event1.jpg" alt="">
 					</div>
@@ -122,10 +123,10 @@
 						<p>本店網羅了各地攝影師的作品，自然，人文等...<a href="#event3">查看更多</a></p>
 					</div>
 				</div>
-				<div class="col-sm-4">					
+				<div class="col-sm-4 d-flex justify-content-center">
 					<div class="event-main">
 						<h2>精彩活動</h2>
-						<p class="text-center">為回饋客戶在本商店的光顧<br>本店將於十月二十舉辦線下活動<br>線上報名可享受早鳥優惠</p>
+						<p class="text-center">為回饋客戶在本商店的光顧<br>本店於十月二十舉辦線下活動<br>線上報名可享受早鳥優惠</p>
 						<button class="btn eve-btn">活動報名</button>
 					</div>
 					<div class="event-main" id="event1">
@@ -135,17 +136,17 @@
 					</div>
 					<div class="event-main" id="event2">
 						<h2>香水調製</h2>
-						<p class="text-center">不同於專櫃品牌，此香水只調配清新氣味的香水，選擇你喜歡的香氣，將有專人帶你製作屬於自己的專屬香水。</p>
+						<p class="text-center">不同於專櫃品牌，此香水只調配清新氣味的香水，選擇你喜歡的香氣，製作屬於自己的專屬清香。</p>
 						<button class="btn eve-btn">活動報名</button>
 					</div>
 					<div class="event-main" id="event3">
 						<h2>藝術展覽</h2>
-						<p class="text-center">本店網羅了各地攝影師的作品，自然，人文等各類題材應有盡有，將於活動期間展出，為生活增添藝術氣息。</p>
+						<p class="text-center">本店網羅了各地攝影師的作品，自然，人文等各類題材，將於活動期間展出，為生活增添藝術氣息。</p>
 						<button class="btn eve-btn">活動報名</button>
 					</div>
 				</div>
-				<div class="col-sm-4 d-flex justify-content-center">					
-					<div class="event-box">
+				<div class="col-sm-4 d-flex justify-content-center">				
+					<div class="event-box" href="#event2">
 						<h3 class="check1">Check!</h3>
 						<img src="img/event5.jpg" alt="">
 					</div>
@@ -157,7 +158,7 @@
 			</div>
 			<div class="row">
 				<div class="col-sm-6">					
-					<div class="event-box box1">
+					<div class="event-box box1" href="#event3">
 						<h3 class="check1">Check!</h3>
 						<img src="img/event3.jpg" alt="">
 					</div>
@@ -206,20 +207,24 @@
 							<div class="col-sm-5 pd-imgbox">
 								<img :src="product.thumb" class="pd-img">
 							</div>
-							<div class="col-sm-7 pd-content">
-								<h2>{{ product.name }}</h2>
-								<p>{{product.content}}</p>
-								<div class="d-flex justify-content-round pt-5" id="process">
-									<P id="price">價格: {{product.price}}</P>
-									<img :src="product.process" class="process-img">
-								</div>	
-								<div class="action-box">
-									<div>
-										<button class="round" @click="minusOne(product)">-</button>
-										<span>{{product.amountShow}}</span>
-										<button class="round" @click="addOne(product)">+</button>
+							<div class="col-sm-7 pd-content pr-5 pb-5">
+								<div>
+									<h2>{{ product.name }}</h2>
+									<p>{{product.content}}</p>
+								</div>
+								<div>
+									<div id="process">
+										<h3 id="price">價格: {{product.price}}</h3>
+										<img :src="product.process" class="process-img">
+									</div>	
+									<div class="action-box">
+										<div>
+											<button class="round" @click="minusOne(product)">-</button>
+											<span>{{product.amountShow}}</span>
+											<button class="round" @click="addOne(product)">+</button>
+										</div>
+										<button @click="addToCart(product)" class="add">加入購物車</button>
 									</div>
-									<button @click="addToCart(product)" class="add">加入購物車</button>
 								</div>
 							</div>
 						</div>
@@ -275,33 +280,35 @@
 			</div>
 			
 			<div class="block-container">
-		        <div class="block"  style="left: 283px;">
-		        	<img href="#tab1" src="img/product1.jpg" alt="">
-		        </div>
-		        <div class="block" style="left: 383px;">
-		        	<img href="#tab2" src="img/product2.jpg" alt="">
-		        </div>
-		        <div class="block" style="left: 483px;">
-		        	<img href="#tab3" src="img/product3.jpg" alt="">
-		        </div>
-		        <div class="block" style="left: 583px;">
-		        	<img href="#tab4" src="img/product4.jpg" alt="">
-		        </div>
-		        <div class="block" style="left: 683px;">
-		        	<img href="#tab5" src="img/product5.jpg" alt="">
-		        </div>
-		        <div class="block" style="left: 83px;">
-		        	<img href="#tab6" src="img/product6.jpg" alt="">
-		        </div>
-		        <div class="block" style="left: 183px;">
-		        	<img href="#tab4" src="img/product4.jpg" alt="">
-		        </div>
-		         <div class="block" style="left: 283px;">
-		        	<img href="#tab2" src="img/product2.jpg" alt="">
-				</div>
-				<div class="block" style="left: 383px;">
-		        	<img href="#tab5" src="img/product5.jpg" alt="">
-				</div>
+				<a href="#shop">
+					<div class="block"  style="left: 283px;">
+						<img href="#tab1" src="img/product1.jpg" alt="">
+					</div>
+					<div class="block" style="left: 383px;">
+						<img href="#tab2" src="img/product2.jpg" alt="">
+					</div>
+					<div class="block" style="left: 483px;">
+						<img href="#tab3" src="img/product3.jpg" alt="">
+					</div>
+					<div class="block" style="left: 583px;">
+						<img href="#tab4" src="img/product4.jpg" alt="">
+					</div>
+					<div class="block" style="left: 683px;">
+						<img href="#tab5" src="img/product5.jpg" alt="">
+					</div>
+					<div class="block" style="left: 83px;">
+						<img href="#tab6" src="img/product6.jpg" alt="">
+					</div>
+					<div class="block" style="left: 183px;">
+						<img href="#tab4" src="img/product4.jpg" alt="">
+					</div>
+					<div class="block" style="left: 283px;">
+						<img href="#tab2" src="img/product2.jpg" alt="">
+					</div>
+					<div class="block" style="left: 383px;">
+						<img href="#tab5" src="img/product5.jpg" alt="">
+					</div>					
+				</a>
 		    </div>
 		</div>
 	</section>
@@ -368,7 +375,7 @@
 								<option>純粹好看</option>
 							</select>
 						</div>
-							<button type="reset" class="btn contact-btn d-flex mx-auto">送出</button>
+							<button type="reset" id="contact-btn2" class="btn contact-btn d-flex mx-auto">送出</button>
 						</div>
 					</div>
 				</div>
