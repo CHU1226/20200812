@@ -245,17 +245,6 @@ section#about .col-md-4{
 	padding: 50px;
 	overflow: hidden;
 }
-.anijump{
-	animation: jump .4s cubic-bezier(.66,-0.11,.57,1.44);
-}
-@keyframes jump{
-	0%,100%{
-		transform: scale(1);
-	}
-	50%{
-		transform: scale(1.2);
-	}
-}
 .ab-box{
 	background: #fff;
 }
@@ -314,6 +303,17 @@ section#about .col-md-4{
 section#event{
 	background-color: var(--trd-color);
 	position: relative;
+}
+.anijump{
+	animation: jump .4s cubic-bezier(.66,-0.11,.57,1.44);
+}
+@keyframes jump{
+	0%,100%{
+		transform: scale(1);
+	}
+	50%{
+		transform: scale(1.2);
+	}
 }
 #circle,#shape{
 	position: absolute;
@@ -695,6 +695,12 @@ footer .footer-social{
 img.social{
 	cursor: pointer;
 	width: 50px;
+}
+#read{
+	padding: 3px;
+	background: var(--fth-color);
+	cursor: pointer;
+	border: 0;
 }
 @media screen and (max-width: 1230px),(max-height: 880px){
 	.event-box,.event-main{
