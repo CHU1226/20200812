@@ -33,12 +33,15 @@ $(document).ready(function() {
 	$('.log-chk,.social').click(function(){
 		alert("目前尚無網路請稍後再試");
 	});
+	$('.event-box').click(function(){
+		$('.event-main').addClass('anijump')
+	});
 	$('.event-main').hide();
 	$('.event-main:first').show();
-	$('.event-content').click(function(){
+	$('.event-box').click(function(){
 		$('.event-main').hide();
 		var checked = $(this).attr("href");
-		$(checked).fadeIn();
+		$(checked).show();
 		return false
 	});
 	$('.tab').hide();
