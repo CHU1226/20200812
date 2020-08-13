@@ -233,7 +233,7 @@ section#about .col-md-4{
 	justify-content: center;
 	align-items: center;
 }
-.ab-box{
+.ab-box,.ab-imgbx{
 	position: relative;
 	width: 80%;
 	height: 55%;
@@ -241,44 +241,51 @@ section#about .col-md-4{
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	padding: 50px;
-	background: #fff;
 	clip-path: var(--shape1);
+	padding: 50px;
+	overflow: hidden;
 }
-.ab-box::before{
+.anijump{
+	animation: jump .4s cubic-bezier(.66,-0.11,.57,1.44);
+}
+@keyframes jump{
+	0%,100%{
+		transform: scale(1);
+	}
+	50%{
+		transform: scale(1.2);
+	}
+}
+.ab-box{
+	background: #fff;
+}
+.ab-imgbx{
+	color: #fff;
+}
+.ab-box::before,.ab-imgbx::after{
 	position: absolute;
 	content: "";
 	top: 50%;
-	transform: translateY(-50%);
 	left: 0;
+	transform: translateY(-50%);
 	width: 100%;
 	height: 0;
-	background: var(--snd-color);
 	z-index: -1;
-	transition: .5s;
+	transition: .4s;
 }
 .ab-box:hover::before{
+	background: var(--snd-color);
 	width: 100%;
 	height: 100%;
 }
-.ab-imgbx{
-	width: 100%;
-	height: 65%;
-	position: relative;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	color: #fff;
-}
-.ab-imgbx p{
-	position: absolute;
-	z-index: 1;
-	padding: 20px;
-	width: 80%;
-	transition: .3s;
-}
-.ab-imgbx:hover p{
+.ab-imgbx:hover::after{
 	background: rgba(0,0,0,0.5);
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+}
+.ab-imgbx p,.ab-imgbx h3{
+	z-index: 1;
 }
 .ab-box .span,.ab-imgbx .span{
 	background-color: var(--snd-color);
@@ -293,16 +300,16 @@ section#about .col-md-4{
 .ab-imgbx .span{
 	z-index: 1;
 }
+#ab-img{
+	position: absolute;
+	width: 130%;
+	height: 100%;
+}
 .ab-box h3{
 	font-weight: bold;
 }
 .ab-box p{
 	text-align: justify;
-}
-#ab-img{
-	width: 100%;
-	height: 100%;
-	clip-path: var(--shape1);
 }
 section#event{
 	background-color: var(--trd-color);
@@ -331,8 +338,11 @@ section#event .row{
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
+	cursor: pointer;
 }
-.event-content{
+.event-content,.event-main{
+	width: 280px;
+	height: 280px;
 	padding: 0 15px 0 15px;
 	background: var(--fth-color);
 	clip-path: var(--shape2);
@@ -340,7 +350,6 @@ section#event .row{
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	cursor: pointer;
 }
 .event-content h2{
 	color: var(--snd-color);
@@ -377,12 +386,9 @@ section#event h3.check1{
 	position: relative;
 }
 .event-main{
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	height: 100%;
+	background: #f29344;
 	color: #fff;
+	clip-path: var(--shape2);
 }
 .event-text{
 	position: absolute;
@@ -407,12 +413,6 @@ section#event h3.check1{
 	font-size: 25px;
 	justify-content: center;
 }
-.event-main h2{
-	color: var(--snd-color);
-}
-.event-main p{
-	font-size: 20px;
-}
 section#shop{
 	background-color: var(--trd-color);
 }
@@ -426,6 +426,10 @@ section#shop .container_fluid{
 	height: 70vh;
 	color: #fff;
 }
+.pd-content{
+	display: grid;
+	align-items: center;
+}
 .pd-main h2{
 	color: var(--snd-color);
 	margin-left: 50px;
@@ -433,7 +437,7 @@ section#shop .container_fluid{
 .pd-main p{
 	font-size: 20px;
 	text-indent: 2em;
-	padding: 20px 150px 0 50px;
+	padding: 20px;
 	text-align: justify;
 }
 .pd-imgbox,.pd-show{
@@ -443,7 +447,6 @@ section#shop .container_fluid{
 }
 #price{
 	white-space: nowrap;
-	padding: 20px;
 }
 .pd-imgbox::before{
 	position: absolute;
@@ -545,8 +548,14 @@ section#shop tfoot td{
 	border: 0;
 	cursor: pointer;
 }
+#process{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
 .process-img{
-	height: 80px;
+	height: 50%;
+	width: 50%;
 }
 .checkout{
 	padding: 10px 20px;
@@ -605,6 +614,9 @@ section#contact{
     padding: 20px 15px;
 	width: 80%;
 	background: rgba(255,255,255,0.8);
+}
+#contact-btn2{
+	margin-top: 80px;
 }
 footer{
 	padding-top: 15px;
@@ -685,31 +697,14 @@ img.social{
 	width: 50px;
 }
 @media screen and (max-width: 1230px),(max-height: 880px){
-	.ab-box p,.ab-imgbx p{
-		font-size: 18px;
-		line-height: 28px;
-	}
-	section#shop .tab{
-		transform: scale(0.8);
-	}
-	.pd-main p{
-		padding: 10px;
-	}
-	#process{
-		padding-top: 10px !important;
-	}
-	section#shop .col-sm-7{
-		padding-top: 0px !important;
-	}
-	.event-box{
-		width: 230px;
+	.event-box,.event-main{
+		width: 240px;
 		height: 230px;
 	}
 	.pd-main .pd-img{
 		width: 320px;
 		height: 320px;
 	}
-	
 }
 @media screen and (max-width: 768px){
 	section,#ct-shape,section#event .row,.pd-main{
@@ -767,8 +762,5 @@ img.social{
 	}
 	#product-list{
 		width: 300px;
-	}
-	.process-img{
-		height: 50px;
 	}
 }
